@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet'>
+</head>
+
+<style>
+    .card {
+        position: relative;
+        width: 50vw;
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .card-subtitle {
+        font-family: 'Cabin';
+        font-weight: bold;
+        font-size: 1.14em;
+        position: absolute;
+        top: 78%;
+        width: 100%;
+        text-align: center;
+        color: #323232;
+    }
+</style>
+
+<body>
+    <div class="card" id="card">
+        <img class="card-image" src="card1.png">
+        <div class="card-content">
+            <p class="card-subtitle">The Keel, the Stern and the Sails</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    window.onload = () => {
+        cardHeight = document.getElementById("card").offsetHeight / 30;
+        document.getElementById("card").style = `font-size: ${cardHeight}px`;
+    }
+</script>
+
+</html>
